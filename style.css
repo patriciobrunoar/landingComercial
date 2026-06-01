@@ -121,11 +121,24 @@ p { margin-bottom: 1rem; color: var(--text-muted); }
     align-items: center;
 }
 
+.logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
 .nav-links a {
     margin-left: 20px;
     font-weight: 600;
     color: var(--text-main);
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -172,6 +185,20 @@ p { margin-bottom: 1rem; color: var(--text-muted); }
 }
 
 @media (max-width: 768px) {
+    .navbar .container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .logo img {
+        height: 26px;
+    }
+    .nav-links {
+        gap: 4px;
+    }
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 0.85rem;
+    }
     .hero {
         flex-direction: column;
         text-align: center;
